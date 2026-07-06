@@ -541,74 +541,97 @@ margin-bottom:15px;
 
 }
 
-/* =========================
+/*=========================
 QUICK ACCESS
-========================= */
+=========================*/
 
 .quick-access{
-    padding:80px 0;
-    background:#ffffff;
+
+padding:90px 0;
+
+background:#f8fafc;
+
 }
 
 .quick-access h2{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:45px;
-    color:#0f7b4d;
-    font-weight:700;
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:50px;
+
+font-weight:700;
+
+color:#0f7b4d;
+
 }
 
 .quick-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
 
-.quick-grid a{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
+display:grid;
 
-    background:#fff;
-    border-radius:20px;
-    height:150px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 
-    color:#222;
-
-    border:1px solid #e5e7eb;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.35s;
-}
-
-.quick-grid a:hover{
-
-    background:#0f7b4d;
-
-    color:#fff;
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+gap:25px;
 
 }
 
-.quick-grid .icon{
+.quick-card{
 
-    font-size:42px;
+background:#fff;
 
-    margin-bottom:15px;
+padding:35px 25px;
+
+border-radius:22px;
+
+text-align:center;
+
+text-decoration:none;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+border:2px solid transparent;
 
 }
 
-.quick-grid span:last-child{
+.quick-card:hover{
 
-    font-size:20px;
+transform:translateY(-10px);
 
-    font-weight:600;
+border-color:#0f7b4d;
+
+box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.quick-card .icon{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+.quick-card h3{
+
+font-size:24px;
+
+margin-bottom:10px;
+
+color:#222;
+
+}
+
+.quick-card p{
+
+font-size:15px;
+
+color:#666;
+
+line-height:1.6;
 
 }
 
@@ -634,21 +657,27 @@ gap:15px;
 
 }
 
-.quick-grid a{
+.quick-card{
 
-height:120px;
-
-}
-
-.quick-grid .icon{
-
-font-size:32px;
+padding:25px 15px;
 
 }
 
-.quick-grid span:last-child{
+.quick-card .icon{
 
-font-size:16px;
+font-size:40px;
+
+}
+
+.quick-card h3{
+
+font-size:18px;
+
+}
+
+.quick-card p{
+
+font-size:13px;
 
 }
 
