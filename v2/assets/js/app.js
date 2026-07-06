@@ -124,3 +124,71 @@ console.log(error);
 }
 
 }
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+loadLatestQuestions();
+
+});
+
+async function loadLatestQuestions(){
+
+const container=document.getElementById("latestQuestions");
+
+if(!container) return;
+
+try{
+
+const response=await fetch("database/index.json");
+
+const data=await response.json();
+
+container.innerHTML="";
+
+data.forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="question-card">
+
+<div class="question-id">
+
+${item.id}
+
+</div>
+
+<h3>
+
+${item.title}
+
+</h3>
+
+<div class="question-category">
+
+${item.category}
+
+</div>
+
+<a href="question.html?id=${item.id}" class="view-btn">
+
+View Answer →
+
+</a>
+
+</div>
+
+`;
+
+});
+
+}
+
+catch(error){
+
+container.innerHTML="<h3>Questions could not be loaded.</h3>";
+
+console.log(error);
+
+}
+
+}
