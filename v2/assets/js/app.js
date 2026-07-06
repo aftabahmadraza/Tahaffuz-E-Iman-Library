@@ -56,139 +56,56 @@ update();
 /* ============================
 Theme
 ============================ */
-
-function initTheme(){
-
-const btn=document.querySelector(".themeBtn");
-
-if(!btn) return;
-
-btn.addEventListener("click",()=>{
-
-document.body.classList.toggle("dark");
-
+document.addEventListener("DOMContentLoaded", () => {
+    loadLatestQuestions();
 });
 
-}
+async function loadLatestQuestions() {
 
-/* ===========================
-Latest Questions
-=========================== */
+    const container = document.getElementById("latestQuestions");
 
-loadLatestQuestions();
+    if (!container) return;
 
-async function loadLatestQuestions(){
+    try {
 
-const container=document.getElementById("latestQuestions");
+        const response = await fetch("database/index.json");
+        const data = await response.json();
 
-if(!container) return;
+        container.innerHTML = "";
 
-try{
+        data.slice(0,6).forEach(item => {
 
-const response=await fetch("../database/index.json");
+            container.innerHTML += `
+            <div class="question-card">
 
-const questions=await response.json();
+                <div class="question-id">
+                    ${item.id}
+                </div>
 
-container.innerHTML="";
+                <h3>${item.title}</h3>
 
-questions.slice(0,6).forEach(item=>{
+                <div class="question-category">
+                    ${item.category}
+                </div>
 
-container.innerHTML+=`
+                <a href="question.html?id=${item.id}" class="view-btn">
+                    View Answer →
+                </a>
 
-<div class="question-card">
+            </div>
+            `;
 
-<h3>${item.title}</h3>
+        });
 
-<p>Category : ${item.category}</p>
+    }
 
-<a href="../question.html?id=${item.id}">
+    catch (error) {
 
-View Answer →
+        console.error(error);
 
-</a>
+        container.innerHTML = "<h3>Questions could not be loaded.</h3>";
 
-</div>
-
-`;
-
-});
-
-}
-
-catch(error){
-
-container.innerHTML="<h3>Questions could not be loaded.</h3>";
-
-console.log(error);
+    }
 
 }
 
-}
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-loadLatestQuestions();
-
-});
-
-async function loadLatestQuestions(){
-
-const container=document.getElementById("latestQuestions");
-
-if(!container) return;
-
-try{
-
-const response=await fetch("database/index.json");
-
-const data=await response.json();
-
-container.innerHTML="";
-
-data.forEach(item=>{
-
-container.innerHTML+=`
-
-<div class="question-card">
-
-<div class="question-id">
-
-${item.id}
-
-</div>
-
-<h3>
-
-${item.title}
-
-</h3>
-
-<div class="question-category">
-
-${item.category}
-
-</div>
-
-<a href="question.html?id=${item.id}" class="view-btn">
-
-View Answer →
-
-</a>
-
-</div>
-
-`;
-
-});
-
-}
-
-catch(error){
-
-container.innerHTML="<h3>Questions could not be loaded.</h3>";
-
-console.log(error);
-
-}
-
-}
