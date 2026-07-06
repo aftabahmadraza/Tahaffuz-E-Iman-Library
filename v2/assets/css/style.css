@@ -467,3 +467,61 @@ body.dark nav a{
 color:white;
 
 }
+
+.quick-access{
+
+padding:80px 20px;
+
+}
+
+.quick-access h2{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:40px;
+
+color:#0f7b4d;
+
+}
+
+.quick-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.quick-grid a{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+text-decoration:none;
+
+font-size:22px;
+
+font-weight:600;
+
+color:#0f7b4d;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.quick-grid a:hover{
+
+transform:translateY(-8px);
+
+}
