@@ -42,20 +42,16 @@ color:white;
 }
 
 .hero h1{
-
 font-size:52px;
-
 color:#ffffff;
-
 margin-bottom:20px;
-
 font-weight:700;
-
 }
 
 .hero p{
 font-size:20px;
-opacity:.9;
+color:#e8f1ff;
+margin-bottom:40px;
 }
 
 .searchBox{
