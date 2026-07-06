@@ -42,8 +42,15 @@ color:white;
 }
 
 .hero h1{
-font-size:48px;
+
+font-size:52px;
+
+color:#ffffff;
+
 margin-bottom:20px;
+
+font-weight:700;
+
 }
 
 .hero p{
