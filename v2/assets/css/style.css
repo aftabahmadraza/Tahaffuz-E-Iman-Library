@@ -1,0 +1,435 @@
+/* ===========================
+Tahaffuz-E-Iman Library V2
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f6f9f6;
+
+    color:#222;
+
+    line-height:1.7;
+
+}
+
+/* Container */
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+HEADER
+=========================== */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:#0f7b4d;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.logo span{
+
+    font-size:28px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#d9ffe7;
+
+}
+
+.themeBtn{
+
+    border:none;
+
+    background:white;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(180deg,#0f7b4d,#1ca96b);
+
+    color:white;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    opacity:.95;
+
+    margin-bottom:45px;
+
+}
+
+/* Search */
+
+.searchBox{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.searchBox input{
+
+    flex:1;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:0 30px;
+
+    font-size:18px;
+
+    outline:none;
+
+}
+
+.searchBox button{
+
+    width:180px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    color:#0f7b4d;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.searchBox button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* Hero Buttons */
+
+.heroButtons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.heroButtons button{
+
+    padding:16px 28px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.heroButtons button:first-child{
+
+    background:white;
+
+    color:#0f7b4d;
+
+}
+
+.heroButtons button:last-child{
+
+    background:#0b5f3c;
+
+    color:white;
+
+}
+
+.heroButtons button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================
+Statistics
+=========================== */
+
+.stats{
+
+    padding:80px 20px;
+
+}
+
+.stats .container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stat-card h2{
+
+    font-size:48px;
+
+    color:#0f7b4d;
+
+}
+
+.stat-card p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+Trending
+=========================== */
+
+.trending{
+
+    padding:20px 20px 80px;
+
+}
+
+.trending h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:50px;
+
+    color:#0f7b4d;
+
+}
+
+.trend-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+    gap:25px;
+
+}
+
+.trend-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.trend-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.searchBox{
+
+flex-direction:column;
+
+}
+
+.searchBox button{
+
+width:100%;
+
+height:60px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
