@@ -193,69 +193,85 @@ opacity:.95;
 
 }
 
-/* =========================
-SEARCH
-========================= */
+/* ===========================
+Search
+=========================== */
 
-.searchBox{
-
-display:flex;
-
-justify-content:center;
+.hero-search{
 
 max-width:900px;
 
 margin:auto;
 
+position:relative;
+
+}
+
+.search-box{
+
+display:flex;
+
 gap:15px;
 
 }
 
-.searchBox input{
+.search-box input{
 
 flex:1;
 
 height:65px;
 
-border:none;
-
 border-radius:50px;
 
-padding:0 25px;
+padding:0 30px;
 
-font-size:18px;
+font-size:20px;
+
+border:2px solid #0f7b4d;
 
 outline:none;
 
 }
 
-.searchBox button{
+.search-box button{
 
 width:180px;
 
 border:none;
 
-background:white;
-
-color:var(--green);
-
 border-radius:50px;
 
-font-size:18px;
+background:#0f7b4d;
 
-font-weight:700;
+color:#fff;
+
+font-size:20px;
+
+font-weight:600;
 
 cursor:pointer;
 
-transition:.3s;
+}
+
+.search-box button:hover{
+
+background:#0b5f3d;
 
 }
 
-.searchBox button:hover{
+.suggestions{
 
-background:#e8fff2;
+position:absolute;
 
-}
+top:75px;
+
+left:0;
+
+right:0;
+
+background:#fff;
+
+border
 
 /* =========================
 BUTTONS
