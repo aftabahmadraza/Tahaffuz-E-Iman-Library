@@ -1,41 +1,61 @@
-async function loadLatestQuestions(){
+/* =======================================
+Latest Questions Loader
+======================================= */
+
+async function loadLatestQuestions() {
 
     const container = document.getElementById("latestQuestions");
 
-    if(!container){
-        alert("latestQuestions DIV NOT FOUND");
+    if (!container) {
+        console.error("latestQuestions container not found.");
         return;
     }
 
-    try{
-
-        alert("Fetching JSON...");
+    try {
 
         const response = await fetch("database/index.json");
 
-        alert(response.status);
+        if (!response.ok) {
+            throw new Error("HTTP Error : " + response.status);
+        }
 
-        const data = await response.json();
+        const questions = await response.json();
 
-        console.log(data);
+        container.innerHTML = "";
 
-        container.innerHTML="";
+        questions.slice(0, 6).forEach(item => {
 
-        data.forEach(item=>{
+            container.innerHTML += `
+                <div class="question-card">
 
-            container.innerHTML+=`
-            <div class="question-card">
-                <h3>${item.title}</h3>
-            </div>
+                    <div class="question-id">
+                        ${item.id}
+                    </div>
+
+                    <h3>${item.title}</h3>
+
+                    <div class="question-category">
+                        ${item.category}
+                    </div>
+
+                    <a href="question.html?id=${item.id}" class="view-btn">
+                        View Answer →
+                    </a>
+
+                </div>
             `;
 
         });
 
-    }catch(error){
+    } catch (error) {
 
-        alert(error);
+        console.error(error);
 
-        console.log(error);
+        container.innerHTML = `
+            <p style="color:red;text-align:center;">
+                Questions could not be loaded.
+            </p>
+        `;
 
     }
 
