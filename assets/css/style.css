@@ -1,0 +1,115 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f6f8fb;
+color:#222;
+}
+
+header{
+background:#0d47a1;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#1565c0,#0d47a1);
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:.9;
+}
+
+.searchBox{
+margin-top:40px;
+}
+
+.searchBox input{
+width:80%;
+max-width:700px;
+padding:18px;
+border-radius:50px;
+border:none;
+font-size:18px;
+}
+
+.categories{
+padding:60px 20px;
+}
+
+.categories h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+font-size:20px;
+font-weight:600;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.latest{
+padding:60px 20px;
+}
+
+.questionCard{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+footer{
+background:#0d47a1;
+color:white;
+padding:20px;
+text-align:center;
+margin-top:50px;
+}
