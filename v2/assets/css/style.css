@@ -1,182 +1,426 @@
-/* =========================================
-   VARIABLES (Light & Dark Theme)
-========================================= */
+/* ==========================================================================
+   TAHAFFUZ-E-IMAN LIBRARY - CORE STYLES (PART 1)
+   Theme: Premium White + Emerald Green (Apple / Stripe / Notion Inspired)
+   ========================================================================== */
+
+/* 1. CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* 2. CSS Variables */
 :root {
-    /* Colors - Premium White & Green */
-    --primary-color: #059669; /* Emerald 600 */
-    --primary-hover: #047857;
-    --primary-light: #d1fae5;
+    /* Colors - Emerald Green Palette */
+    --color-emerald-50: #ecfdf5;
+    --color-emerald-100: #d1fae5;
+    --color-emerald-500: #10b981;
+    --color-emerald-600: #059669; /* Primary */
+    --color-emerald-700: #047857;
     
-    --bg-color: #f9fafb;
-    --surface-color: #ffffff;
-    --surface-glass: rgba(255, 255, 255, 0.85);
+    /* Colors - Premium White & Grays */
+    --color-bg-main: #ffffff;
+    --color-bg-subtle: #f9fafb;
+    --color-text-primary: #111827;
+    --color-text-secondary: #4b5563;
+    --color-text-tertiary: #9ca3af;
+    --color-border: #e5e7eb;
     
-    --text-main: #111827;
-    --text-muted: #6b7280;
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 9999px;
     
-    --border-color: #e5e7eb;
+    /* Shadows (Stripe/Apple inspired soft, layered shadows) */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.025);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.025);
+    --shadow-focus: 0 0 0 3px var(--color-emerald-100);
     
-    /* Layout */
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Transition */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Transitions */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Font Sizes */
+    --text-xs: 0.75rem;     /* 12px */
+    --text-sm: 0.875rem;    /* 14px */
+    --text-base: 1rem;      /* 16px */
+    --text-lg: 1.125rem;    /* 18px */
+    --text-xl: 1.25rem;     /* 20px */
+    --text-2xl: 1.5rem;     /* 24px */
+    --text-3xl: 2rem;       /* 32px */
+    --text-4xl: 2.5rem;     /* 40px */
+    --text-5xl: 3rem;       /* 48px */
 }
 
-body.dark-mode {
-    --primary-color: #10b981;
-    --primary-hover: #34d399;
-    --primary-light: rgba(16, 185, 129, 0.2);
-    
-    --bg-color: #111827; /* Gray 900 */
-    --surface-color: #1f2937; /* Gray 800 */
-    --surface-glass: rgba(31, 41, 55, 0.85);
-    
-    --text-main: #f9fafb;
-    --text-muted: #9ca3af;
-    
-    --border-color: #374151;
-}
-
-/* =========================================
-   RESET & TYPOGRAPHY
-========================================= */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
+/* 3. Body */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-bg-subtle);
+    color: var(--color-text-primary);
     line-height: 1.6;
-    transition: background-color var(--transition), color var(--transition);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color var(--transition-base), color var(--transition-base);
 }
 
-.arabic-text { font-family: 'Amiri', serif; font-size: 1.75rem; text-align: right; direction: rtl; line-height: 2; margin-bottom: 1rem; color: var(--primary-color); }
-
-h1, h2, h3 { font-weight: 600; color: var(--text-main); }
-h1 { font-size: 2rem; margin-bottom: 1rem; line-height: 1.3; }
-h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-a { text-decoration: none; color: inherit; }
-button { font-family: inherit; cursor: pointer; border: none; background: none; }
-hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
-
-.container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
-.hidden { display: none !important; }
-
-/* =========================================
-   COMPONENTS
-========================================= */
-/* Glass Header */
-.glass-header {
-    background: var(--surface-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky; top: 0; z-index: 100;
+/* 4. Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
-.header-inner { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-.logo { display: flex; align-items: center; gap: 0.5rem; font-size: 1.25rem; font-weight: 700; color: var(--primary-color); }
-.desktop-nav a { margin: 0 1rem; font-weight: 500; transition: var(--transition); }
-.desktop-nav a:hover { color: var(--primary-color); }
-.icon-btn { font-size: 1.2rem; padding: 0.5rem; color: var(--text-main); transition: var(--transition); }
-.icon-btn:hover { transform: scale(1.1); }
 
-/* Breadcrumb */
-.breadcrumb { margin: 2rem 0; font-size: 0.9rem; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary-color); font-weight: 500; }
-.breadcrumb a:hover { text-decoration: underline; }
+/* 5. Glass Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color var(--transition-base), border-color var(--transition-base);
+}
 
-/* Cards & Glassmorphism */
-.card {
-    background: var(--surface-color);
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+/* 6. Logo */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.025em;
+    transition: opacity var(--transition-fast);
+}
+
+.brand-logo:hover {
+    opacity: 0.8;
+}
+
+.brand-logo .logo-accent {
+    color: var(--color-emerald-600);
+}
+
+/* 7. Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-emerald-600);
+}
+
+/* 8. Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 0;
+    gap: 1.5rem;
+}
+
+.hero-title {
+    font-size: var(--text-5xl);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    font-size: var(--text-xl);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    font-weight: 400;
+}
+
+/* 9. Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    padding-right: 4rem;
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-sm);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-input::placeholder {
+    color: var(--color-text-tertiary);
+}
+
+.search-input:focus {
+    border-color: var(--color-emerald-500);
+    box-shadow: var(--shadow-focus);
+}
+
+/* 10. Search Button */
+.search-btn {
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-emerald-600);
+    color: #ffffff;
+    height: calc(100% - 1rem);
+    padding: 0 1.25rem;
+    border-radius: var(--radius-pill);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.search-btn:hover {
+    background-color: var(--color-emerald-700);
+    transform: scale(1.02);
+}
+
+.search-btn:active {
+    transform: scale(0.98);
+}
+
+/* 11. Primary Button */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--color-emerald-600);
     border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-emerald-700);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
+/* 12. Secondary Button */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-bg-subtle);
+    border-color: var(--color-text-tertiary);
+}
+
+/* 13. Statistics Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
-.glass-card { background: var(--surface-glass); backdrop-filter: blur(8px); }
 
-/* Buttons */
-.btn {
-    display: inline-block; padding: 0.75rem 1.5rem; border-radius: var(--radius-sm);
-    font-weight: 500; transition: var(--transition); text-align: center;
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
-.btn-primary { background: var(--primary-color); color: #fff; }
-.btn-primary:hover:not(:disabled) { background: var(--primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
-.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
-.w-100 { width: 100%; }
 
-/* Badges */
-.meta-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.badge { background: var(--primary-light); color: var(--primary-color); padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
-.q-id { font-family: monospace; color: var(--text-muted); font-size: 0.9rem; }
+.stat-value {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--color-emerald-600);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
 
-/* Think Box */
-.think-box { border: 2px dashed var(--primary-color); text-align: center; }
-.think-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
-.timer { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); font-variant-numeric: tabular-nums; }
+.stat-label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
 
-/* Answer Section */
-.short-answer { font-size: 1.25rem; font-weight: 500; color: var(--primary-color); }
+/* 14. Responsive (Desktop + Tablet + Mobile) */
 
-/* Evidence Tabs */
-.evidence-container h2 { margin-bottom: 1.5rem; }
-.tabs-nav { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); scrollbar-width: none; }
-.tabs-nav::-webkit-scrollbar { display: none; }
-.tab-btn { padding: 0.5rem 1rem; border-radius: var(--radius-sm); font-weight: 500; color: var(--text-muted); transition: var(--transition); white-space: nowrap; }
-.tab-btn:hover { background: var(--primary-light); color: var(--primary-color); }
-.tab-btn.active { background: var(--primary-color); color: #fff; }
-.tab-pane { display: none; animation: fadeIn 0.4s ease; }
-.tab-pane.active { display: block; }
+/* Tablet (Screens smaller than 992px) */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-/* Evidence Content Blocks */
-.proof-card { background: var(--bg-color); border-radius: var(--radius-sm); padding: 1.5rem; margin-bottom: 1rem; border: 1px solid var(--border-color); border-left: 4px solid var(--primary-color); }
-.proof-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
-
-/* Embeds (YT / IG) */
-.embed-responsive { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 1rem;}
-.embed-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-
-/* Image Gallery */
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
-.gallery img { width: 100%; height: auto; border-radius: var(--radius-sm); cursor: pointer; transition: var(--transition); }
-.gallery img:hover { transform: scale(1.05); }
-
-/* Related Questions */
-.related-section { margin-top: 3rem; }
-.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-.related-card { background: var(--surface-color); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); transition: var(--transition); display: block; }
-.related-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--primary-color); }
-
-/* Floating Action Buttons */
-.fab-container { position: fixed; bottom: 2rem; right: 2rem; display: flex; flex-direction: column; gap: 0.75rem; z-index: 90; }
-.fab { width: 45px; height: 45px; border-radius: 50%; background: var(--surface-glass); backdrop-filter: blur(10px); border: 1px solid var(--border-color); box-shadow: var(--shadow-soft); display: flex; justify-content: center; align-items: center; font-size: 1.2rem; transition: var(--transition); }
-.fab:hover { background: var(--primary-color); color: #fff; transform: scale(1.1); }
-#scroll-top-btn { display: none; }
-
-/* Skeleton Loader */
-.skeleton { background: linear-gradient(90deg, var(--border-color) 25%, var(--bg-color) 50%, var(--border-color) 75%); background-size: 200% 100%; animation: loading 1.5s infinite; border-radius: var(--radius-sm); margin-bottom: 1rem; }
-.s-title { height: 40px; width: 70%; margin-top: 2rem;}
-.s-text { height: 20px; width: 100%; }
-.s-box { height: 150px; width: 100%; margin-top: 2rem; }
-
-/* Animations */
-@keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.fade-in { animation: fadeIn 0.6s ease forwards; }
-@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.slide-up { animation: slideUp 0.6s ease forwards; }
-
-/* Responsive */
+/* Mobile Landscape & Small Tablets (Screens smaller than 768px) */
 @media (max-width: 768px) {
-    .header-inner { padding: 0; }
-    .desktop-nav { display: none; } /* Add mobile menu logic separately if needed */
-    .container { padding: 0 1rem; }
-    .fab-container { bottom: 1rem; right: 1rem; }
+    .main-nav {
+        display: none; /* Hide for mobile, typically toggled via JS menu */
+    }
+    
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    
+    .hero-section {
+        padding: 4rem 0;
+    }
+    
+    .hero-title {
+        font-size: var(--text-3xl);
+    }
+}
+
+/* Mobile Portrait (Screens smaller than 480px) */
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-input {
+        padding: 0.875rem 1.25rem;
+        padding-right: 3.5rem;
+    }
+    
+    .search-btn {
+        padding: 0 1rem;
+    }
+}
+
+/* 15. Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Overriding Colors for Dark Mode */
+        --color-bg-main: #000000;
+        --color-bg-subtle: #0a0a0a;
+        --color-text-primary: #f9fafb;
+        --color-text-secondary: #d1d5db;
+        --color-text-tertiary: #6b7280;
+        --color-border: #262626;
+        
+        /* Adjusting Emerald for better contrast in dark mode */
+        --color-emerald-600: #10b981;
+        --color-emerald-700: #34d399;
+        
+        /* Modifying Shadows for dark environments */
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+        --shadow-focus: 0 0 0 3px rgba(16, 185, 129, 0.3);
+    }
+    
+    /* Ensuring Glass Header maintains readability in dark mode */
+    .site-header {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 }
