@@ -1,61 +1,85 @@
-/* =======================================
-Latest Questions Loader
-======================================= */
+/* =====================================
+Latest Questions
+Tahaffuz-E-Iman Library
+===================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadLatestQuestions();
+
+});
 
 async function loadLatestQuestions() {
 
     const container = document.getElementById("latestQuestions");
 
-    if (!container) {
-        console.error("latestQuestions container not found.");
-        return;
-    }
+    if (!container) return;
 
     try {
 
         const response = await fetch("database/index.json");
 
         if (!response.ok) {
-            throw new Error("HTTP Error : " + response.status);
+
+            throw new Error("index.json Not Found");
+
         }
 
-        const questions = await response.json();
+        const data = await response.json();
 
         container.innerHTML = "";
 
-        questions.slice(0, 6).forEach(item => {
+        data.slice(0, 6).forEach(item => {
 
             container.innerHTML += `
-                <div class="question-card">
 
-                    <div class="question-id">
-                        ${item.id}
-                    </div>
+<div class="question-card">
 
-                    <h3>${item.title}</h3>
+<div class="question-id">
 
-                    <div class="question-category">
-                        ${item.category}
-                    </div>
+${item.id}
 
-                    <a href="question.html?id=${item.id}" class="view-btn">
-                        View Answer →
-                    </a>
+</div>
 
-                </div>
-            `;
+<h3>
+
+${item.title}
+
+</h3>
+
+<div class="question-category">
+
+${item.category}
+
+</div>
+
+<a href="question.html?id=${item.id}" class="view-btn">
+
+View Answer →
+
+</a>
+
+</div>
+
+`;
 
         });
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         console.error(error);
 
         container.innerHTML = `
-            <p style="color:red;text-align:center;">
-                Questions could not be loaded.
-            </p>
-        `;
+
+<div style="padding:30px;text-align:center">
+
+❌ Latest Questions could not be loaded.
+
+</div>
+
+`;
 
     }
 
