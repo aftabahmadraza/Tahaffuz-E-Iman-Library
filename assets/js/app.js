@@ -1,21 +1,59 @@
-/* =======================================
+/* =====================================
 Tahaffuz-E-Iman Library
-Main App
-======================================= */
+Common JavaScript
+Version : 2.0
+===================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Tahaffuz-E-Iman Library Loaded");
+    console.log("Tahaffuz-E-Iman Loaded");
 
+    initTheme();
     initCounters();
-
-    loadLatestQuestions();
+    initScrollTop();
 
 });
 
-/* =======================================
-Counter Animation
-======================================= */
+/* =====================================
+Theme
+===================================== */
+
+function initTheme() {
+
+    const btn = document.getElementById("theme-toggle");
+
+    if (!btn) return;
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        btn.innerHTML = "☀️";
+    }
+
+    btn.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+
+            localStorage.setItem("theme", "dark");
+            btn.innerHTML = "☀️";
+
+        } else {
+
+            localStorage.setItem("theme", "light");
+            btn.innerHTML = "🌙";
+
+        }
+
+    });
+
+}
+
+/* =====================================
+Animated Counter
+===================================== */
 
 function initCounters() {
 
@@ -23,15 +61,17 @@ function initCounters() {
 
     counters.forEach(counter => {
 
-        const target = parseInt(counter.innerText);
+        const target = parseInt(counter.innerText.replace(/\D/g, ""));
+
+        if (isNaN(target)) return;
 
         let current = 0;
 
-        const speed = Math.ceil(target / 100);
+        const step = Math.ceil(target / 100);
 
-        function updateCounter() {
+        function update() {
 
-            current += speed;
+            current += step;
 
             if (current >= target) {
 
@@ -43,11 +83,49 @@ function initCounters() {
 
             counter.innerText = current.toLocaleString() + "+";
 
-            requestAnimationFrame(updateCounter);
+            requestAnimationFrame(update);
 
         }
 
-        updateCounter();
+        update();
+
+    });
+
+}
+
+/* =====================================
+Scroll To Top
+===================================== */
+
+function initScrollTop() {
+
+    const btn = document.getElementById("scroll-top-btn");
+
+    if (!btn) return;
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 300) {
+
+            btn.style.display = "flex";
+
+        } else {
+
+            btn.style.display = "none";
+
+        }
+
+    });
+
+    btn.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
 
     });
 
