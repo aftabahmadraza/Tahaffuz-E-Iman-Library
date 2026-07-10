@@ -337,3 +337,61 @@ alert("Citation Copied");
 }
 
 });
+
+/* =====================================
+EVIDENCE VIEWER
+===================================== */
+
+let zoomLevel = 1;
+
+document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("view-scan")){
+
+        e.preventDefault();
+
+        document.getElementById("evidenceModal").style.display="flex";
+
+        document.getElementById("viewerImage").src=e.target.dataset.image;
+
+        document.getElementById("viewerTitle").innerText=e.target.dataset.title;
+
+        zoomLevel=1;
+
+        document.getElementById("viewerImage").style.transform="scale(1)";
+
+    }
+
+});
+
+document.getElementById("closeViewer").onclick=function(){
+
+document.getElementById("evidenceModal").style.display="none";
+
+};
+
+document.getElementById("zoomIn").onclick=function(){
+
+zoomLevel+=0.2;
+
+document.getElementById("viewerImage").style.transform=`scale(${zoomLevel})`;
+
+};
+
+document.getElementById("zoomOut").onclick=function(){
+
+if(zoomLevel>0.4){
+
+zoomLevel-=0.2;
+
+}
+
+document.getElementById("viewerImage").style.transform=`scale(${zoomLevel})`;
+
+};
+
+document.getElementById("fullScreen").onclick=function(){
+
+document.getElementById("viewerImage").requestFullscreen();
+
+};
