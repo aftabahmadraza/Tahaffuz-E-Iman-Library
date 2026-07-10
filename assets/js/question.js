@@ -321,3 +321,19 @@ Please check Question ID.
 `;
 
 }
+
+document.addEventListener("click",(e)=>{
+
+if(e.target.classList.contains("copy-reference")){
+
+navigator.clipboard.writeText(
+
+e.target.dataset.reference
+
+);
+
+alert("Citation Copied");
+
+}
+
+});
