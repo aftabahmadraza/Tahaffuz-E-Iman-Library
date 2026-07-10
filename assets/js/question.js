@@ -126,7 +126,7 @@ function renderBooks(data){
 
     if(!data.referenceBooks || data.referenceBooks.length===0){
 
-        container.innerHTML="<p>No Book References.</p>";
+        container.innerHTML="<p>No Book Reference Found.</p>";
 
         return;
 
@@ -152,7 +152,9 @@ function renderBooks(data){
 
 <div>
 
-<strong>Author</strong><br>
+<b>Author</b>
+
+<br>
 
 ${book.author}
 
@@ -160,7 +162,9 @@ ${book.author}
 
 <div>
 
-<strong>Volume</strong><br>
+<b>Volume</b>
+
+<br>
 
 ${book.volume}
 
@@ -168,7 +172,9 @@ ${book.volume}
 
 <div>
 
-<strong>Page</strong><br>
+<b>Page</b>
+
+<br>
 
 ${book.page}
 
@@ -176,7 +182,9 @@ ${book.page}
 
 <div>
 
-<strong>Line</strong><br>
+<b>Line</b>
+
+<br>
 
 ${book.line}
 
@@ -188,15 +196,23 @@ ${book.line}
 
 <a href="${book.scan}" target="_blank">
 
-📷 Scan
+📷 View Scan
 
 </a>
 
 <a href="${book.pdf}" target="_blank">
 
-📄 PDF
+📄 Open PDF
 
 </a>
+
+<button class="copy-reference"
+
+data-reference="${book.bookName}, Vol. ${book.volume}, Page ${book.page}, Line ${book.line}">
+
+📋 Copy Citation
+
+</button>
 
 </div>
 
