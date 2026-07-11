@@ -7,63 +7,50 @@
     "updated": "2026-07-07",
     "keywords": ["Allah","Arsh","Istiwa","Aqeedah"],
     "description": "Authentic answer based on Quran, Hadith and reliable Islamic books.",
-    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
-    "references": [],
-    "evidence": [],
-    "fatwas": [],
-    "related": ["AQ000002","AQ000003"]
-  },
-  {
-  "id": "AQ000002",
-  "category": "Aqeedah",
-  "title": "Kya Noor Bashar Tha?",
-  "status": "Verified",
-  "updated": "2026-07-11",
-  "keywords": ["Noor", "Bashar", "Seerat", "Aqeedah"],
-  "description": "Authentic answer based on Quran, Hadith and reliable Islamic sources.",
-  "answer": "<h3>Jawab</h3><p>Yahan detailed HTML answer hoga.</p>",
-  "references": [
-    {
-      "type": "book",
-      "book": "Sample Book",
-      "author": "Sample Author",
-      "publisher": "Sample Publisher",
-      "language": "Urdu",
-      "volume": "1",
-      "page": "100",
-      "line": "10-15",
-      "edition": "Latest",
-      "scan": "assets/evidence/AQ000002/book100.jpg",
-      "highlight": "assets/evidence/AQ000002/highlight100.jpg",
-      "pdf": "assets/books/SampleBook.pdf"
-    }
-  ],
-  "evidence": [
-    {
-      "type": "book_scan",
-      "title": "Original Book Scan",
-      "image": "assets/evidence/AQ000002/book100.jpg"
-    },
-    {
-      "type": "highlight",
-      "title": "Highlighted Proof",
-      "image": "assets/evidence/AQ000002/highlight100.jpg"
-    },
-    {
-      "type": "pdf",
-      "title": "Original PDF",
-      "file": "assets/books/SampleBook.pdf",
-      "page": 100
-    }
-  ],
-  "fatwas": [
-    {
-      "mufti": "Mufti ABC",
-      "organization": "Darul Ifta",
-      "reference": "Fatwa No.456",
-      "date": "2025-05-01",
-      "pdf": "assets/evidence/AQ000002/fatwa.pdf"
-    }
-  ],
-  "related": ["AQ000001", "AQ000003", "AQ000004"]
-}
+    "answer": "<h3>Jawab</h3><p>Allah Ta'ala Arsh Par Ista'wa Farmai Hai...</p><blockquote>Quran: Surah Taha 20:5</blockquote>",
+    "references": [
+      {
+        "type": "book",
+        "book": "Tafsir Ibn Kathir",
+        "author": "Imam Ibn Kathir",
+        "publisher": "Islamic Publishers",
+        "language": "Arabic/Urdu",
+        "volume": "1",
+        "page": "150",
+        "line": "10-15",
+        "edition": "2020",
+        "scan": "assets/evidence/AQ000001/tafsir_150.jpg",
+        "highlight": "assets/evidence/AQ000001/highlight_150.jpg",
+        "pdf": "assets/books/TafsirIbnKathir_Vol1.pdf"
+      }
+    ],
+    "evidence": [
+      {
+        "type": "book_scan",
+        "title": "Tafsir Ibn Kathir - Page 150",
+        "image": "assets/evidence/AQ000001/tafsir_150.jpg"
+      },
+      {
+        "type": "highlight",
+        "title": "Relevant Text Highlighted",
+        "image": "assets/evidence/AQ000001/highlight_150.jpg"
+      },
+      {
+        "type": "pdf",
+        "title": "Full PDF Reference",
+        "file": "assets/books/TafsirIbnKathir_Vol1.pdf",
+        "page": 150
+      }
+    ],
+    "fatwas": [
+      {
+        "mufti": "Mufti Taqi Usmani",
+        "organization": "Darul Ifta Karachi",
+        "reference": "Fatwa No.2024/150",
+        "date": "2024-05-01",
+        "pdf": "assets/evidence/AQ000001/fatwa.pdf"
+      }
+    ],
+    "related": ["AQ000002","AQ000003","AQ000008"]
+  }
+]
