@@ -8,5 +8,46 @@
     "id": "AQ000002",
     "title": "Kya Noor Bashar Tha?",
     "category": "Aqeedah"
+  },
+  {
+    "id": "AQ000003",
+    "title": "Kya Tawassul Jaiz Hai?",
+    "category": "Fiqh"
+  },
+  {
+    "id": "AQ000004",
+    "title": "Bidat Ki Haqeeqat Kya Hai?",
+    "category": "Bidah"
+  },
+  {
+    "id": "AQ000005",
+    "title": "Kya Mawlid Manana Jaiz Hai?",
+    "category": "Fiqh"
+  },
+  {
+    "id": "AQ000006",
+    "title": "Kya Quran Sharif Ko Chhune Ke Liye Wuzu Zaroori Hai?",
+    "category": "Fiqh"
+  },
+  {
+    "id": "AQ000007",
+    "title": "Kya Tasbeeh Par Namaz Padhna Jaiz Hai?",
+    "category": "Fiqh"
+  },
+  {
+    "id": "AQ000008",
+    "title": "Kya Imam Mehdi Ki Aamad Qareeb Hai?",
+    "category": "Aqeedah"
+  },
+  {
+    "id": "AQ000009",
+    "title": "Kya Tasawwuf Islam Mein Hai?",
+    "category": "Tasawwuf"
+  },
+  {
+    "id": "AQ000010",
+    "title": "Kya Aurat Ko Masjid Mein Namaz Padhna Jaiz Hai?",
+    "category": "Fiqh"
   }
+  // इसी तरह AQ000011 से AQ000026 तक placeholders जोड़ें
 ]
