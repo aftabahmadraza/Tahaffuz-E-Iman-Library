@@ -1,0 +1,127 @@
+/* ==========================================
+STATISTICS SECTION - OPTIMIZED FOR WIDTH
+========================================== */
+.stats {
+  padding: 50px 0;
+  background: #fff;
+}
+
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--card);
+  padding: 25px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  min-height: auto;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive - Keep 4 columns on desktop */
+@media (max-width: 1200px) {
+  .stats .container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 20px 15px;
+  }
+
+  .stat-card h2 {
+    font-size: 28px;
+  }
+
+  .stat-card p {
+    font-size: 13px;
+  }
+}
+
+/* Tablet - 2x2 grid */
+@media (max-width: 768px) {
+  .stats {
+    padding: 40px 0;
+  }
+
+  .stats .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 18px 12px;
+  }
+
+  .stat-card h2 {
+    font-size: 24px;
+  }
+
+  .stat-card p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile - Single column */
+@media (max-width: 480px) {
+  .stats {
+    padding: 30px 0;
+  }
+
+  .stats .container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px 10px;
+  }
+
+  .stat-card h2 {
+    font-size: 20px;
+  }
+
+  .stat-card p {
+    font-size: 11px;
+  }
+}
+
+/* Dark Mode */
+body.dark .stat-card {
+  background: #2d2d2d;
+  color: #e5e5e5;
+  border-color: #444;
+}
+
+body.dark .stat-card h2 {
+  color: #4ec9a6;
+}
+
+body.dark .stat-card p {
+  color: #a0a0a0;
+}
