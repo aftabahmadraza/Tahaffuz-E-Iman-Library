@@ -47,6 +47,8 @@ async function loadQuestion() {
         
         renderGallery(data);
 
+        renderRelated(data);
+
     }
 
     catch(error){
