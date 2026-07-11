@@ -183,15 +183,15 @@ function renderGallery(data){
 
     container.innerHTML="";
 
-    if(!data.evidence || data.evidence.length===0){
-
+    if(!data.references || data.references.length===0){
+        
         container.innerHTML="<p>No Evidence Available.</p>";
 
         return;
 
     }
 
-    data.evidence.forEach(item=>{
+    data.references.forEach(item=>{
 
         if(item.type==="book_scan" || item.type==="highlight" || item.type==="image"){
 
