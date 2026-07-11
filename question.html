@@ -1,355 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tahaffuz-Eiman Library</title>
-    
-    <meta name="description" id="meta-desc" content="World's Largest Islamic Evidence Library">
-    <meta property="og:title" id="og-title" content="Tahaffuz-Eiman Library">
-    <meta property="og:description" id="og-desc" content="World's Largest Islamic Evidence Library">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" id="canonical-url" href="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tahaffuz-Eiman Library</title>
+  
+  <meta name="description" content="World's Largest Islamic Evidence Library">
+  <meta property="og:title" content="Tahaffuz-Eiman Library">
+  <meta property="og:description" content="World's Largest Islamic Evidence Library">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="index.html">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/question.css">
-
-    <script type="application/ld+json" id="schema-script"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/question.css">
 </head>
 <body>
 
-    <header class="glass-header sticky">
-        <div class="container header-inner">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">🕌</span>
-                <span class="logo-text">Tahaffuz-Eiman</span>
-            </a>
-            <nav class="desktop-nav">
-                <a href="index.html">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="about.html">About</a>
-            </nav>
-            <div class="header-actions">
-                <button class="icon-btn" aria-label="Search" id="search-btn">🔍</button>
-                <button class="icon-btn" aria-label="Toggle Dark Mode" id="theme-toggle">🌙</button>
-            </div>
-        </div>
-    </header>
-<!-- ==========================================
-QUESTION HERO
-========================================== -->
-
-<section class="question-hero">
-
-<div class="container">
-
-<div class="breadcrumb">
-
-<a href="index.html">🏠 Home</a>
-
-<span>›</span>
-
-<span id="questionCategory">Loading...</span>
-
-<span>›</span>
-
-<span id="questionID">AQ000001</span>
-
-</div>
-
-<div class="question-card">
-
-<div class="question-badges">
-
-<span class="badge-id" id="badgeID">
-
-AQ000001
-
-</span>
-
-<span class="badge-category" id="badgeCategory">
-
-Aqeedah
-
-</span>
-
-<span class="badge-status" id="badgeStatus">
-
-✔ Verified
-
-</span>
-
-</div>
-
-<h1 id="questionTitle">
-
-Loading Question...
-
-</h1>
-
-<p class="question-subtitle">
-
-Authentic Answer Based on Quran, Hadith & Reliable Islamic Sources
-
-</p>
-
-<div class="question-actions">
-
-<a href="#answerSection" class="hero-btn">
-
-📝 Read Answer
-
-</a>
-
-<a href="#bookSection" class="hero-btn">
-
-📚 Book References
-
-</a>
-
-<a href="#gallerySection" class="hero-btn">
-
-🖼 Evidence Gallery
-
-</a>
-
-<a href="#fatwaSection" class="hero-btn">
-
-⚖ Fatwa
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-    <!-- ==========================================
-ANSWER SECTION
-========================================== -->
-
-<section class="answer-section" id="answerSection">
-
-<div class="container">
-
-<div class="section-card">
-
-<div class="section-title">
-
-📝 Detailed Answer
-
-</div>
-
-<div id="questionAnswer" class="answer-content">
-
-<p>
-
-Loading answer...
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-   <!-- ==========================================
-BOOK REFERENCES
-========================================== -->
-
-<section class="book-section" id="bookSection">
-
-<div class="container">
-
-<div class="section-card">
-
-<div class="section-title">
-
-📚 Book References
-
-</div>
-
-<p class="section-desc">
-
-All references are taken from authentic books. Click Scan or PDF to verify the original source.
-
-</p>
-
-<div id="bookReferenceCards" class="book-grid">
-
-<!-- Dynamic Book Cards -->
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-    
-<!-- ==========================================
-Evidence Gallery
-========================================== -->
-
-<section class="evidence-section" id="gallerySection">
-
-<div class="container">
-
-<div class="section-card">
-
-<div class="section-title">
-
-🖼 Evidence Gallery
-
-</div>
-
-<p class="section-desc">
-
-Original Book Scans, Highlighted Pages & Documentary Proofs
-
-</p>
-
-<div id="evidenceGallery" class="gallery-grid">
-
-<!-- Dynamic Gallery -->
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-    <!-- ==========================================
-PDF VIEWER
-========================================== -->
-
-<section class="pdf-section" id="pdfSection">
-
-<div class="container">
-
-<div class="section-card">
-
-<div class="section-title">
-
-📄 Original PDF Evidence
-
-</div>
-
-<p class="section-desc">
-
-Read the original book PDF without leaving the website.
-
-</p>
-
-<div class="pdf-toolbar">
-
-<button id="pdfPrev">⬅ Previous</button>
-
-<span id="pdfPageInfo">Page 1</span>
-
-<button id="pdfNext">Next ➡</button>
-
-<button id="pdfOpen">📂 Open PDF</button>
-
-<button id="pdfDownload">⬇ Download</button>
-
-</div>
-
-<iframe
-
-id="pdfViewer"
-
-src=""
-
-loading="lazy"
-
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-</div>
-
-</section>
-
-    <section class="related-section">
-
-    <div class="container">
-
-        <h2 class="section-title">Related Questions</h2>
-
-        <div id="relatedQuestions" class="related-grid">
-
-            <p>Loading...</p>
-
-        </div>
-
+<header class="glass-header sticky">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">🕌 Tahaffuz-Eiman</a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <button id="search-btn" class="icon-btn" aria-label="Search">🔍</button>
+      <button id="theme-toggle" class="icon-btn" aria-label="Dark Mode">🌙</button>
     </div>
+  </div>
+</header>
 
-</section>
-    
-    <div class="fab-container">
-        <button class="fab" id="share-btn" aria-label="Share" title="Share">🔗</button>
-        <button class="fab" id="copy-btn" aria-label="Copy Link" title="Copy Link">📋</button>
-        <button class="fab" id="print-btn" aria-label="Print" title="Print">🖨️</button>
-        <button class="fab" id="scroll-top-btn" aria-label="Scroll to Top" title="Top">⬆️</button>
+<!-- Question Hero -->
+<section class="question-hero container">
+  <div class="breadcrumb">
+    <a href="index.html">🏠 Home</a> › <span id="questionCategory">Loading...</span> › <span id="questionID">AQ000001</span>
+  </div>
+  <div class="question-card">
+    <div class="question-badges">
+      <span id="badgeID">AQ000001</span>
+      <span id="badgeCategory">Aqeedah</span>
+      <span id="badgeStatus">✔ Verified</span>
     </div>
+    <h1 id="questionTitle">Loading Question...</h1>
+    <p class="question-subtitle">Authentic Answer Based on Quran, Hadith & Reliable Sources</p>
+    <div class="question-actions">
+      <a href="#answerSection" class="hero-btn">📝 Answer</a>
+      <a href="#bookSection" class="hero-btn">📚 Books</a>
+      <a href="#gallerySection" class="hero-btn">🖼 Gallery</a>
+      <a href="#fatwaSection" class="hero-btn">⚖ Fatwa</a>
+    </div>
+  </div>
+</section>
 
-    <footer class="site-footer">
-        <div class="container text-center">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Tahaffuz-Eiman Library. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Answer -->
+<section id="answerSection" class="answer-section container">
+  <div class="section-card">
+    <h2 class="section-title">📝 Detailed Answer</h2>
+    <div id="questionAnswer" class="answer-content"><p>Loading answer...</p></div>
+  </div>
+</section>
 
-    <!-- ==========================================
-EVIDENCE VIEWER
-========================================== -->
+<!-- Books -->
+<section id="bookSection" class="book-section container">
+  <div class="section-card">
+    <h2 class="section-title">📚 Book References</h2>
+    <p>All references are authentic. Click Scan or PDF to verify.</p>
+    <div id="bookReferenceCards" class="book-grid"></div>
+  </div>
+</section>
 
+<!-- Gallery -->
+<section id="gallerySection" class="evidence-section container">
+  <div class="section-card">
+    <h2 class="section-title">🖼 Evidence Gallery</h2>
+    <p>Original Scans & Documentary Proofs</p>
+    <div id="evidenceGallery" class="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- PDF Viewer -->
+<section id="pdfSection" class="pdf-section container">
+  <div class="section-card">
+    <h2 class="section-title">📄 Original PDF Evidence</h2>
+    <div class="pdf-toolbar">
+      <button id="pdfPrev">⬅</button>
+      <span id="pdfPageInfo">Page 1</span>
+      <button id="pdfNext">➡</button>
+      <button id="pdfOpen">📂 Open</button>
+      <button id="pdfDownload">⬇ Download</button>
+    </div>
+    <iframe id="pdfViewer" src="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Related -->
+<section class="related-section container">
+  <h2 class="section-title">🔗 Related Questions</h2>
+  <div id="relatedQuestions" class="related-grid"><p>Loading...</p></div>
+</section>
+
+<!-- Floating Actions -->
+<div class="fab-container">
+  <button id="share-btn" class="fab">🔗</button>
+  <button id="copy-btn" class="fab">📋</button>
+  <button id="print-btn" class="fab">🖨️</button>
+  <button id="scroll-top-btn" class="fab">⬆️</button>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container text-center">
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Tahaffuz-Eiman Library</p>
+    <p>Made with ❤️ by Aftab Ahmad Raza</p>
+  </div>
+</footer>
+
+<!-- Evidence Modal -->
 <div id="evidenceModal" class="evidence-modal">
-
-<div class="viewer-header">
-
-<button id="closeViewer">✖</button>
-
-<h3 id="viewerTitle">Evidence Viewer</h3>
-
+  <div class="viewer-header">
+    <button id="closeViewer">✖</button>
+    <h3 id="viewerTitle">Evidence Viewer</h3>
+  </div>
+  <div class="viewer-body">
+    <img id="viewerImage" src="" alt="Evidence">
+  </div>
+  <div class="viewer-footer">
+    <button id="zoomOut">➖</button>
+    <button id="zoomIn">➕</button>
+    <button id="fullScreen">⛶</button>
+  </div>
 </div>
 
-<div class="viewer-body">
-
-<img id="viewerImage" src="" alt="Evidence">
-
-</div>
-
-<div class="viewer-footer">
-
-<button id="zoomOut">➖</button>
-
-<button id="zoomIn">➕</button>
-
-<button id="fullScreen">⛶ Full Screen</button>
-
-</div>
-
-</div>
-
-    <script src="assets/js/book-viewer.js"></script>
-  <script src="assets/js/question.js"></script>
+<script src="assets/js/book-viewer.js"></script>
+<script src="assets/js/question.js"></script>
 <script src="assets/js/app.js"></script>
-
 </body>
 </html>
