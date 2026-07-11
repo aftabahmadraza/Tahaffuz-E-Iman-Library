@@ -1,134 +1,59 @@
-{
-  "id": "AQ000001",
-
-  "category": "Aqeedah",
-
-  "title": "Kya Allah Arsh Par Hai?",
-
-  "status": "Verified",
-
-  "updated": "2026-07-07",
-
-  "keywords": [
-    "Allah",
-    "Arsh",
-    "Istiwa",
-    "Aqeedah",
-    "Imam Ahmad Raza",
-    "Fatawa Razawiya",
-    "Quran",
-    "Hadith"
-  ],
-
-  "description": "Authentic answer based on Quran, Hadith and reliable Islamic books.",
-
-  "answer": "<h3>Jawab</h3><p>Yahan Full Detailed HTML Answer hoga.</p><blockquote>Arabic / Urdu Quote yahan hogi.</blockquote><p>Iske niche detail explanation hogi.</p>",
-
-  "references": [
-    {
-      "type": "book",
-
-      "book": "Fatawa Razawiya",
-
-      "author": "Imam Ahmad Raza Khan",
-
-      "publisher": "Raza Foundation",
-
-      "language": "Urdu",
-
-      "volume": "29",
-
-      "page": "512",
-
-      "line": "12-18",
-
-      "edition": "Latest",
-
-      "scan": "assets/evidence/AQ000001/book512.jpg",
-
-      "highlight": "assets/evidence/AQ000001/highlight512.jpg",
-
-      "pdf": "assets/books/Fatawa-Razawiya/Volume-29.pdf"
-    }
-  ],
-
-  "evidence": [
-
-    {
-      "type": "book_scan",
-
-      "title": "Original Book Scan",
-
-      "image": "assets/evidence/AQ000001/book512.jpg"
-    },
-
-    {
-      "type": "highlight",
-
-      "title": "Highlighted Proof",
-
-      "image": "assets/evidence/AQ000001/highlight512.jpg"
-    },
-
-    {
-      "type": "pdf",
-
-      "title": "Original PDF",
-
-      "file": "assets/books/Fatawa-Razawiya/Volume-29.pdf",
-
-      "page": 512
-    },
-
-    {
-      "type": "youtube",
-
-      "title": "Video Explanation",
-
-      "url": "https://youtube.com/watch?v=xxxx"
-    },
-
-    {
-      "type": "instagram",
-
-      "title": "Instagram Reel",
-
-      "url": "https://instagram.com/reel/xxxxx"
-    },
-
-    {
-      "type": "audio",
-
-      "title": "Audio Bayan",
-
-      "file": "assets/evidence/AQ000001/audio.mp3"
-    }
-
-  ],
-
-  "fatwas": [
-
-    {
-      "mufti": "Mufti XYZ",
-
-      "organization": "Darul Ifta",
-
-      "reference": "Fatwa No.123",
-
-      "date": "2025-03-01",
-
-      "pdf": "assets/evidence/AQ000001/fatwa.pdf"
-    }
-
-  ],
-
-  "related": [
-
-    "AQ000002",
-
-    "AQ000003",
-
-    "AQ000004"
-
-  ]
-}
+[
+  {
+    "id": "AQ000001",
+    "category": "Aqeedah",
+    "title": "Kya Allah Arsh Par Hai?",
+    "status": "Verified",
+    "updated": "2026-07-07",
+    "keywords": ["Allah","Arsh","Istiwa","Aqeedah"],
+    "description": "Authentic answer based on Quran, Hadith and reliable Islamic books.",
+    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
+    "references": [],
+    "evidence": [],
+    "fatwas": [],
+    "related": ["AQ000002","AQ000003"]
+  },
+  {
+    "id": "AQ000002",
+    "category": "Seerat",
+    "title": "Kya Noor Bashar Tha?",
+    "status": "Verified",
+    "updated": "2026-07-07",
+    "keywords": ["Noor","Bashar","Seerat"],
+    "description": "Discussion on Noor vs Bashar.",
+    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
+    "references": [],
+    "evidence": [],
+    "fatwas": [],
+    "related": ["AQ000001","AQ000003"]
+  },
+  {
+    "id": "AQ000003",
+    "category": "Fiqh",
+    "title": "Kya Tawassul Jaiz Hai?",
+    "status": "Verified",
+    "updated": "2026-07-07",
+    "keywords": ["Tawassul","Fiqh","Dua"],
+    "description": "Authentic ruling on Tawassul.",
+    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
+    "references": [],
+    "evidence": [],
+    "fatwas": [],
+    "related": ["AQ000001","AQ000002"]
+  },
+  {
+    "id": "AQ000004",
+    "category": "Bidah",
+    "title": "Bidat Ki Haqeeqat Kya Hai?",
+    "status": "Verified",
+    "updated": "2026-07-07",
+    "keywords": ["Bidah","Innovation"],
+    "description": "Explanation of Bidah.",
+    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
+    "references": [],
+    "evidence": [],
+    "fatwas": [],
+    "related": ["AQ000005"]
+  }
+  // इसी तरह AQ000005 से AQ000026 तक objects जोड़ें
+]
