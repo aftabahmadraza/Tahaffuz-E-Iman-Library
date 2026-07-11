@@ -193,28 +193,31 @@ function renderGallery(data){
 
     data.references.forEach(item=>{
 
-        if(item.type==="book_scan" || item.type==="highlight" || item.type==="image"){
+       if(item.scan){
 
-            container.innerHTML+=`
+    container.innerHTML += `
+        <div class="gallery-card">
+            <img src="${item.scan}" alt="Book Scan" loading="lazy">
+            <div class="gallery-info">
+                <h4>Book Scan</h4>
+            </div>
+        </div>
+    `;
 
-<div class="gallery-card">
+}
 
-<img src="${item.file}" alt="${item.title}">
+if(item.highlight){
 
-<div class="gallery-info">
+    container.innerHTML += `
+        <div class="gallery-card">
+            <img src="${item.highlight}" alt="Highlighted Evidence" loading="lazy">
+            <div class="gallery-info">
+                <h4>Highlighted Evidence</h4>
+            </div>
+        </div>
+    `;
 
-<h4>${item.title}</h4>
-
-<span>${item.type}</span>
-
-</div>
-
-</div>
-
-`;
-
-        }
-
+}
     });
 
 }
