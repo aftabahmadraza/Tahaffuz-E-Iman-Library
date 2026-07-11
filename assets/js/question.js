@@ -1,5 +1,3 @@
-// assets/js/question.js - NEEDS TO BE CREATED
-
 document.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(window.location.search);
   const questionId = params.get("id") || "AQ000001";
