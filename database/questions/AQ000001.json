@@ -14,46 +14,56 @@
     "related": ["AQ000002","AQ000003"]
   },
   {
-    "id": "AQ000002",
-    "category": "Seerat",
-    "title": "Kya Noor Bashar Tha?",
-    "status": "Verified",
-    "updated": "2026-07-07",
-    "keywords": ["Noor","Bashar","Seerat"],
-    "description": "Discussion on Noor vs Bashar.",
-    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
-    "references": [],
-    "evidence": [],
-    "fatwas": [],
-    "related": ["AQ000001","AQ000003"]
-  },
-  {
-    "id": "AQ000003",
-    "category": "Fiqh",
-    "title": "Kya Tawassul Jaiz Hai?",
-    "status": "Verified",
-    "updated": "2026-07-07",
-    "keywords": ["Tawassul","Fiqh","Dua"],
-    "description": "Authentic ruling on Tawassul.",
-    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
-    "references": [],
-    "evidence": [],
-    "fatwas": [],
-    "related": ["AQ000001","AQ000002"]
-  },
-  {
-    "id": "AQ000004",
-    "category": "Bidah",
-    "title": "Bidat Ki Haqeeqat Kya Hai?",
-    "status": "Verified",
-    "updated": "2026-07-07",
-    "keywords": ["Bidah","Innovation"],
-    "description": "Explanation of Bidah.",
-    "answer": "<h3>Jawab</h3><p>Detailed Answer...</p>",
-    "references": [],
-    "evidence": [],
-    "fatwas": [],
-    "related": ["AQ000005"]
-  }
-  // इसी तरह AQ000005 से AQ000026 तक objects जोड़ें
-]
+  "id": "AQ000002",
+  "category": "Aqeedah",
+  "title": "Kya Noor Bashar Tha?",
+  "status": "Verified",
+  "updated": "2026-07-11",
+  "keywords": ["Noor", "Bashar", "Seerat", "Aqeedah"],
+  "description": "Authentic answer based on Quran, Hadith and reliable Islamic sources.",
+  "answer": "<h3>Jawab</h3><p>Yahan detailed HTML answer hoga.</p>",
+  "references": [
+    {
+      "type": "book",
+      "book": "Sample Book",
+      "author": "Sample Author",
+      "publisher": "Sample Publisher",
+      "language": "Urdu",
+      "volume": "1",
+      "page": "100",
+      "line": "10-15",
+      "edition": "Latest",
+      "scan": "assets/evidence/AQ000002/book100.jpg",
+      "highlight": "assets/evidence/AQ000002/highlight100.jpg",
+      "pdf": "assets/books/SampleBook.pdf"
+    }
+  ],
+  "evidence": [
+    {
+      "type": "book_scan",
+      "title": "Original Book Scan",
+      "image": "assets/evidence/AQ000002/book100.jpg"
+    },
+    {
+      "type": "highlight",
+      "title": "Highlighted Proof",
+      "image": "assets/evidence/AQ000002/highlight100.jpg"
+    },
+    {
+      "type": "pdf",
+      "title": "Original PDF",
+      "file": "assets/books/SampleBook.pdf",
+      "page": 100
+    }
+  ],
+  "fatwas": [
+    {
+      "mufti": "Mufti ABC",
+      "organization": "Darul Ifta",
+      "reference": "Fatwa No.456",
+      "date": "2025-05-01",
+      "pdf": "assets/evidence/AQ000002/fatwa.pdf"
+    }
+  ],
+  "related": ["AQ000001", "AQ000003", "AQ000004"]
+}
